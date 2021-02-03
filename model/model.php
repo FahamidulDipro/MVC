@@ -2,14 +2,14 @@
     include "./book.php";
     class Model{
         public function getBookDetails(){
-         array(
+         return array(
              "xyz"=> new Book('xyz Book','Kamran Hafiz','History Book'),
              "Jungle Book"=> new Book('Jungle Book','R.Kipling','Classic Book')
         );
         }
-        public function getBook(){
+        public function getBook($title){
             $allBooks = $this->getBookDetails();
-            return $allBooks['$title']
+            return $allBooks[$title];
         }
     }
 ?>
