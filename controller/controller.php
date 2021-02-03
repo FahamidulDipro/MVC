@@ -7,11 +7,14 @@ include "./model/model.php";
             $this->model= new Model();
         }
         public function invoke(){
-            // $this->model->getBookDetails();
+         
             if(!isset($_GET['book'])){
                 $books = $this->model->getBookDetails(); 
+                include './view/booklist.php';
+        
             }else{
               $books = $this->model->getBook($_GET['book']);
+              include './view/viewbook.php';
             }
         }
     }

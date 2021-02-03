@@ -1,9 +1,9 @@
 <?php
-    include "./book.php";
+    include "./model/book.php";
     class Model{
         public function getBookDetails(){
-          array(
-             "xyz"=> new Book('xyz Book','Kamran Hafiz','History Book'),
+        return array(
+             "xyz"=> new Book('xyz','Kamran Hafiz','History Book'),
              "Jungle Book"=> new Book('Jungle Book','R.Kipling','Classic Book')
         );
         }
